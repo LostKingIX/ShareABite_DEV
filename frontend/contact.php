@@ -8,3 +8,13 @@
  * - Display of other contact methods (email, phone, etc.)
  * - FAQ section to address common questions
  */
+
+include('header.php');
+include('contact-form.php');
+
+
+
+
+
+
+include('footer.php');
