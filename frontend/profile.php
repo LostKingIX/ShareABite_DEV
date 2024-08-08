@@ -1,4 +1,4 @@
-// profile.php
+<!-- // profile.php
 /**
  * ShareABite - User Profile Page
  * 
@@ -8,7 +8,7 @@
  * - Option to update profile information
  * - Display of user's saved recipes and meal plans
  * - Option to change password
- */
+ */ -->
 
 
  <!DOCTYPE html>
@@ -29,7 +29,7 @@
       <!-- Navigation Menu -->
       <nav class="nav">
         <a href="#" class="nav-item">Home</a> <!-- Home Link -->
-        <a href="#" class="nav-item">Profile</a> <!-- Profile Link -->
+        <a href="./profile.html" class="nav-item">Profile</a> <!-- Profile Link -->
         <a href="../index.html" class="brand">ShareABite</a> <!-- Company Name -->
         <a href="#" class="nav-item">Recipes</a> <!-- Recipes Link -->
         <a href="#" class="nav-item">Community</a> <!-- Community Link -->
