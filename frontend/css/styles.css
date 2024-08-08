@@ -15,7 +15,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #F0F0F0;
+    background-color: #ffffff;
     color: #333;
   }
   
@@ -175,17 +175,51 @@ body {
   }
   
   /* Profile Page CSS Transitions */
-  .profile-section button {
-    transition: opacity 0.5s ease, transform 0.5s ease;
-  }
-  
-  .profile-section button.hidden {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  
-  .profile-section button:not(.hidden) {
-    opacity: 1;
-    transform: scale(1);
-  }
-  
+
+ .profile-section {
+  background-color: #F7F7DC;
+  padding: 20px;
+  border: 1px solid #CCCCCC;
+}
+
+.name-fields, .manage-account, .dietary-preferences {
+  margin-bottom: 20px;
+}
+
+.manage-account-links a {
+  display: block;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.editable {
+  background-color: #FFFFFF;
+  border: 1px solid #CCCCCC;
+}
+
+.transition {
+  transition: all 0.3s ease-in-out;
+}
+
+.file-input {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.file-input-label {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #6b705c;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.file-input-label:hover {
+  background-color: #4a5844;
+}

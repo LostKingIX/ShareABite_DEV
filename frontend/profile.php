@@ -10,6 +10,22 @@
  * - Option to change password
  */ -->
 
+ <?php
+  // Include database and user classes
+  // include_once './backend/config/database.php';
+  // include_once './backend/classes/User.class.php';
+
+  // // Instantiate database and user objects
+  // $database = new Database();
+  // $db = $database->getConnection();
+
+  // $user = new User($db);
+
+  // // Get the user ID (this should be retrieved from session or request)
+  // $user_id = 1; // Example user ID
+  // $user->getUser($user_id);
+
+?>
 
  <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +41,7 @@
   <header class="header">
     <div class="header-container">
       <!-- Company Logo -->
-      <img src="logo.png" alt="Company Logo" class="logo">
+      <img src="../assets/images/logo_test.jpg" alt="Company Logo" class="logo">
       <!-- Navigation Menu -->
       <nav class="nav">
         <a href="#" class="nav-item">Home</a> <!-- Home Link -->
@@ -43,13 +59,13 @@
     <section class="profile-section">
       <h1 class="brand">ShareABite</h1>
       <div class="profile-container">
-
         <!-- User Name Fields -->
         <div class="name-fields">
           <label for="first-name">First Name:</label>
-          <input type="text" id="first-name" class="user-name" value="<?php echo $user['first_name']; ?>" readonly> <!-- PHP to dynamically display user's first name -->
+          <input type="text" id="first-name" class="user-name" value="<?php echo $firstName; ?>" readonly> <!-- PHP to dynamically display user's first name -->
+          
           <label for="last-name">Last Name:</label>
-          <input type="text" id="last-name" class="user-name" value="<?php echo $user['last_name']; ?>" readonly> <!-- PHP to dynamically display user's last name -->
+          <input type="text" id="last-name" class="user-name" value="<?php echo $lastName; ?>" readonly> <!-- PHP to dynamically display user's last name -->
         </div>
 
         <!-- User Picture -->
@@ -118,6 +134,6 @@
     </div>
   </footer>
 
-  <script src="./js/script.js"></script>
+  <script src="./js/profile.js"></script>
 </body>
 </html>

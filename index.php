@@ -23,12 +23,12 @@
   <header class="header">
     <div class="header-container">
       <!-- Company Logo -->
-      <img src="logo.png" alt="Company Logo" class="logo">
+      <img src="./assets/images/logo_test.jpg" alt="Company Logo" class="logo">
       <!-- Navigation Menu -->
       <nav class="nav">
-        <a href="#" class="nav-item">Home</a> <!-- Home Link -->
-        <a href="./frontend/profile.html" class="nav-item">Profile</a> <!-- Profile Link -->
-        <a href="./index.html" class="brand">ShareABite</a> <!-- Company Name -->
+        <a href="./index.php" class="nav-item">Home</a> <!-- Home Link -->
+        <a href="./frontend/profile.php" class="nav-item">Profile</a> <!-- Profile Link -->
+        <a class="brand">ShareABite</a> <!-- Company Name -->
         <a href="#" class="nav-item">Recipes</a> <!-- Recipes Link -->
         <a href="#" class="nav-item">Community</a> <!-- Community Link -->
         <a href="#" class="nav-item sign-in">Sign In / Register</a> <!-- Sign In/Register Button -->
@@ -108,7 +108,7 @@
     </div>
   </footer>
 
-  <script src="./js/script.js"></script>
+  <script src="./frontend/js/script.js"></script>
   
 </body>
 </html>
