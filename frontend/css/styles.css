@@ -1,0 +1,191 @@
+/* 
+  styles.css
+  Author: Kuldeep Mohanta
+  Description: This CSS file provides the styling for the homepage of the website. 
+  It includes styles for the fixed header, seamless color blocks for an immersive 
+  scrolling experience, transparent navigation buttons, and responsive layout elements. 
+  The color scheme uses #D9D9D9 for a light gray background and #98FF98 for a fresh green 
+  accent, ensuring a clean and modern look across all sections of the page.
+*/
+
+
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F0F0F0;
+    color: #333;
+  }
+  
+  /* Header Styles */
+  .header {
+    background-color: #FFFFE0; /* Light yellow */
+    padding: 10px 20px;
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 50px;
+  }
+  
+  .nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-item {
+    margin: 0 10px;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .brand {
+    font-weight: bold;
+    margin: 0 20px;
+  }
+  
+  .sign-in {
+    background-color: #E0E0E0;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  /* Main Content Styles */
+  .main-content {
+    padding: 20px;
+  }
+  
+  .profile-section {
+    background-color: #FFFFE0; /* Light yellow */
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .profile-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .name-fields {
+    text-align: left;
+  }
+  
+  .name-fields label {
+    font-weight: bold;
+  }
+  
+  .user-name {
+    display: block;
+    width: 200px;
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+  
+  .user-picture {
+    text-align: center;
+  }
+  
+  .picture {
+    width: 150px;
+    height: 150px;
+    background-color: #E0E0E0;
+    margin-bottom: 10px;
+  }
+  
+  .upload-btn {
+    display: none;
+  }
+  
+  .manage-account {
+    text-align: left;
+  }
+  
+  .manage-account ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .manage-account ul li {
+    margin: 5px 0;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .dietary-preferences {
+    margin-top: 20px;
+  }
+  
+  .preferences-container {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .dietary-preferences label {
+    margin-right: 10px;
+  }
+  
+  /* Footer Styles */
+  .footer {
+    background-color: #FFFFE0; /* Light yellow */
+    padding: 20px;
+    border-top: 1px solid #000;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .footer-logo {
+    width: 50px;
+  }
+  
+  .footer-nav,
+  .legal-links {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-nav li,
+  .legal-links li {
+    margin: 5px 0;
+  }
+  
+  .footer-nav a,
+  .legal-links a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    flex: 1;
+    margin: 0 10px;
+  }
+  
+  /* Profile Page CSS Transitions */
+  .profile-section button {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  .profile-section button.hidden {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  
+  .profile-section button:not(.hidden) {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
