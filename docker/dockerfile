@@ -1,0 +1,20 @@
+# Use an official PHP image as a parent image
+FROM php:7.4-apache
+
+# Install git and other necessary packages
+RUN apt-get update && apt-get install -y git unzip
+
+# Enable Apache rewrite module
+RUN a2enmod rewrite
+
+# Set the working directory
+WORKDIR /var/www/html
+
+# Clone the repository
+RUN git clone https://github.com/yourusername/your-repo.git .
+
+# Copy the repository content to the Apache document root
+COPY . /var/www/html/
+
+# Expose port 80
+EXPOSE 80
