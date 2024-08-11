@@ -11,3 +11,18 @@
  * - Social sharing functionality
  */
 
+
+ <!-- Header Section -->
+
+ <?php include('header.php'); ?>
+
+<!-- Main Body Content --> 
+
+
+
+
+
+
+
+<!-- Footer Section -->
+<?php include('footer.php'); ?>
