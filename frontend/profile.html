@@ -9,7 +9,7 @@
  * - Display of user's saved recipes and meal plans
  * - Option to change password
  */ -->
-
+<!-- 
  <?php
   // Include database and user classes
   // include_once './backend/config/database.php';
@@ -25,7 +25,7 @@
   // $user_id = 1; // Example user ID
   // $user->getUser($user_id);
 
-?>
+?> -->
 
  <!DOCTYPE html>
 <html lang="en">
@@ -46,62 +46,70 @@
       <nav class="nav">
         <a href="../index.html" class="nav-item">Home</a> <!-- Home Link -->
         <a href="./profile.html" class="nav-item">Profile</a> <!-- Profile Link -->
-        <a href="#" class="brand">ShareABite</a> <!-- Company Name -->
+        <span class="brand">ShareABite</span> <!-- Company Name -->
         <a href="#" class="nav-item">Recipes</a> <!-- Recipes Link -->
         <a href="#" class="nav-item">Community</a> <!-- Community Link -->
         <a href="#" class="nav-item sign-in">Sign In / Register</a> <!-- Sign In/Register Button -->
       </nav>
     </div>
   </header>
+  
 
   <!-- Profile Page Content -->
-  <main class="main-content">
+  <main class="main-content" role="main">
     <section class="profile-section">
-      <h1 class="brand">ShareABite</h1>
-      <div class="profile-container">
-        <!-- User Name Fields -->
-        <div class="name-fields">
-          <label for="first-name">First Name:</label>
-          <input type="text" id="first-name" class="user-name" value="<?php echo $firstName; ?>" readonly> <!-- PHP to dynamically display user's first name -->
-          
-          <label for="last-name">Last Name:</label>
-          <input type="text" id="last-name" class="user-name" value="<?php echo $lastName; ?>" readonly> <!-- PHP to dynamically display user's last name -->
+        <h1 class="brand">ShareABite</h1>
+
+        <div class="profile-container">
+          <div class="name-fields">
+              <div class="name-field">
+                  <label for="firstName">First Name:</label>
+                  <div class="input-wrapper">
+                      <input type="text" id="firstName" value="John" readonly>
+                  </div>
+              </div>
+              <div class="name-field">
+                  <label for="lastName">Last Name:</label>
+                  <div class="input-wrapper">
+                      <input type="text" id="lastName" value="Doe" readonly>
+                  </div>
+              </div>
+          </div>
+
+            <div class="user-picture">
+                <!-- PHP would dynamically set the src attribute to user's picture -->
+                <img src="../assets/images/default-profile.jpg" alt="User Picture" class="picture">
+                <input type="file" id="pictureUpload" class="file-input" accept="image/*">
+                <label for="pictureUpload" class="file-input-label hidden">Upload</label>
+            </div>
         </div>
 
-        <!-- User Picture -->
-        <div class="user-picture">
-          <img src="<?php echo $user['picture']; ?>" alt="User Picture" class="picture"> <!-- PHP to dynamically display user's picture -->
-          <button id="upload-btn" class="upload-btn hidden">Upload</button> <!-- Upload button initially hidden -->
+        <div class="manage-account">
+            <h2>Manage Account:</h2>
+            <ul class="manage-account-links">
+                <li><a href="#" id="updateNameLink">Update Name</a></li>
+                <li><a href="#" id="updatePictureLink">Update User Picture</a></li>
+                <li><a href="logout.php">Log Out</a></li>
+            </ul>
+            <button id="doneButton" class="hidden">Done</button>
+            <button id="cancelButton" class="hidden">Cancel</button>
         </div>
-      </div>
-      <!-- Manage Account Section -->
-      <div class="manage-account">
-        <p>Manage Account:</p>
-        <ul>
-          <li><a href="#" id="update-name-link">Update Name</a></li>
-          <li><a href="#" id="update-picture-link">Update User Picture</a></li>
-          <li><a href="logout.php">Log Out</a></li>
-        </ul>
-        <button id="done-btn" class="hidden">Done</button> <!-- Done button initially hidden -->
-        <button id="cancel-btn" class="hidden">Cancel</button> <!-- Cancel button initially hidden -->
-      </div>
 
-      <!-- Dietary Preferences Section -->
-      <div class="dietary-preferences">
-        <p>Dietary Preference(s):</p>
-        <div class="preferences-container">
-          <label><input type="checkbox" name="preference" value="no_nuts"> No Nuts</label>
-          <label><input type="checkbox" name="preference" value="lactose_intolerant"> Lactose Intolerant</label>
-          <label><input type="checkbox" name="preference" value="keto_diet"> Keto Diet</label>
-          <label><input type="checkbox" name="preference" value="vegan"> Vegan</label>
-          <label><input type="checkbox" name="preference" value="gluten_free"> Gluten-Free</label>
-          <label><input type="checkbox" name="preference" value="halal_food"> Halal Food</label>
+        <div class="dietary-preferences">
+            <h2>Dietary Preference(s):</h2>
+            <div class="preferences-container">
+                <label><input type="checkbox" name="preference" value="no_nuts"> No Nuts</label>
+                <label><input type="checkbox" name="preference" value="lactose_intolerant"> Lactose Intolerant</label>
+                <label><input type="checkbox" name="preference" value="keto_diet"> Keto Diet</label>
+                <label><input type="checkbox" name="preference" value="vegan"> Vegan</label>
+                <label><input type="checkbox" name="preference" value="gluten_free"> Gluten-Free</label>
+                <label><input type="checkbox" name="preference" value="halal"> Halal Food</label>
+            </div>
+            <button id="updatePreferences" class="hidden">Update</button>
+            <button id="cancelPreferences" class="hidden">Cancel</button>
         </div>
-        <button id="update-pref-btn" class="hidden">Update</button> <!-- Update button for preferences initially hidden -->
-        <button id="cancel-pref-btn" class="hidden">Cancel</button> <!-- Cancel button for preferences initially hidden -->
-      </div>
     </section>
-  </main>
+</main>
 
   <!-- Footer Section -->
   <footer class="footer">
