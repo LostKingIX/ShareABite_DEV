@@ -1,6 +1,6 @@
 /* 
   styles.css
-  Author: Group 1 - Kuldeep Mohanta
+  
   Description: This CSS file provides the styling for the homepage of the website. 
   It includes styles for the fixed header, seamless color blocks for an immersive 
   scrolling experience, transparent navigation buttons, and responsive layout elements. 
@@ -9,7 +9,7 @@
 */
 
 
-
+/* Author: Group 1 - Kuldeep Mohanta */
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
@@ -183,47 +183,6 @@ body {
   text-decoration: none;
   font-size: 20px; /* Increased font size */
 }
-  
- /* Footer Styles */
-/* Modified: Updated footer background color and padding */
-.footer {
-  background-color: #FFFFE0;
-  padding: 20px;
-}
-
-/* Modified: Adjusted footer layout */
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* Modified: Adjusted footer logo size */
-.footer-logo {
-  width: 50px;
-}
-
-/* Added: New styles for footer columns */
-.footer-left, .footer-center, .footer-right {
-  flex: 1;
-}
-
-/* Modified: Adjusted footer list styles */
-.footer ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer ul li {
-  margin-bottom: 10px;
-}
-
-.footer a {
-  color: #333;
-  text-decoration: none;
-}
-
 
 /* Profile Page CSS */
 
@@ -395,3 +354,16 @@ button:hover {
   background-color: #f0f0f0;
   border: 1px solid #4CAF50;
 }
+
+/* Sign Page CSS */
+
+
+/* Register CSS */
+
+/* Community CSS */
+
+/* About CSS */
+
+/* Contact CSS */
+
+/* Meal Planner CSS */
