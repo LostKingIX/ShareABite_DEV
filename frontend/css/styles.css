@@ -1,6 +1,6 @@
 /* 
   styles.css
-  Author: Group 1 - Kuldeep Mohanta
+  
   Description: This CSS file provides the styling for the homepage of the website. 
   It includes styles for the fixed header, seamless color blocks for an immersive 
   scrolling experience, transparent navigation buttons, and responsive layout elements. 
@@ -9,7 +9,7 @@
 */
 
 
-
+/* Home Page - Kuldeep Mohanta */
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
@@ -19,207 +19,357 @@ body {
     color: #333;
   }
   
-  /* Header Styles */
-  .header {
-    background-color: #FFFFE0; /* Light yellow */
-    padding: 10px 20px;
-  }
-  
-  .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .logo {
-    width: 50px;
-  }
-  
-  .nav {
-    display: flex;
-    align-items: center;
-  }
-  
-  .nav-item {
-    margin: 0 10px;
-    color: #333;
-    text-decoration: none;
-  }
-  
-  .brand {
-    font-weight: bold;
-    margin: 0 20px;
-  }
-  
-  .sign-in {
-    background-color: #E0E0E0;
-    padding: 5px 10px;
-    border-radius: 5px;
-  }
-  
-  /* Main Content Styles */
-  .main-content {
-    padding: 20px;
-  }
-  
-  .profile-section {
-    background-color: #FFFFE0; /* Light yellow */
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .profile-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  
-  .name-fields {
-    text-align: left;
-  }
-  
-  .name-fields label {
-    font-weight: bold;
-  }
-  
-  .user-name {
-    display: block;
-    width: 200px;
-    margin-bottom: 10px;
-    padding: 5px;
-  }
-  
-  .user-picture {
-    text-align: center;
-  }
-  
-  .picture {
-    width: 150px;
-    height: 150px;
-    background-color: #E0E0E0;
-    margin-bottom: 10px;
-  }
-  
-  .upload-btn {
-    display: none;
-  }
-  
-  .manage-account {
-    text-align: left;
-  }
-  
-  .manage-account ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .manage-account ul li {
-    margin: 5px 0;
-  }
-  
-  .hidden {
-    display: none;
-  }
-  
-  .dietary-preferences {
-    margin-top: 20px;
-  }
-  
-  .preferences-container {
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  .dietary-preferences label {
-    margin-right: 10px;
-  }
-  
-  /* Footer Styles */
-  .footer {
-    background-color: #FFFFE0; /* Light yellow */
-    padding: 20px;
-    border-top: 1px solid #000;
-  }
-  
-  .footer-container {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .footer-logo {
-    width: 50px;
-  }
-  
-  .footer-nav,
-  .legal-links {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .footer-nav li,
-  .legal-links li {
-    margin: 5px 0;
-  }
-  
-  .footer-nav a,
-  .legal-links a {
-    color: #333;
-    text-decoration: none;
-  }
-  
-  .footer-left,
-  .footer-center,
-  .footer-right {
-    flex: 1;
-    margin: 0 10px;
-  }
-  
-  /* Profile Page CSS Transitions */
-
- .profile-section {
-  background-color: #F7F7DC;
-  padding: 20px;
-  border: 1px solid #CCCCCC;
+/* Header Styles */
+.header {
+  background-color: #FFFFE0;
+  padding: 20px 0; /* Increased padding */
 }
 
-.name-fields, .manage-account, .dietary-preferences {
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1600px; /* Increased max-width */
+  margin: 0 auto;
+  padding: 0 30px; /* Increased horizontal padding */
+}
+
+.logo {
+  width: 75px; /* Increased logo size */
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  margin: 0% /* required to align nav items to center */
+}
+
+.nav-item {
+  margin: 0 20px; /* Increased margin between nav items */
+  color: #333;
+  text-decoration: none;
+  font-size: 20px; /* Increased font size */
+}
+
+.brand {
+  font-weight: bold;
+  font-size: 36px; /* Increased brand font size */
+  margin: 0 40px; /* Increased margin */
+}
+
+.sign-in {
+  background-color: #E0E0E0;
+  padding: 10px 20px; /* Increased padding */
+  border-radius: 8px; /* Increased border radius */
+}
+
+/* Main Content Styles */
+.main-content {
+  padding: 40px 0; /* Increased padding */
+}
+
+.intro-section {
+  padding: 60px 0; /* Increased padding */
+}
+
+.intro-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1600px; /* Increased max-width */
+  margin: 0 auto;
+  padding: 0 30px; /* Increased horizontal padding */
+}
+
+.company-image {
+  width: 500px; /* Increased width */
+  height: 300px; /* Increased height */
+  background-color: #D9D9D9;
+}
+
+.intro-text {
+  max-width: 800px; /* Increased max-width */
+}
+
+.intro-text h1 {
+  font-size: 48px; /* Increased heading font size */
   margin-bottom: 20px;
 }
 
-.manage-account-links a {
-  display: block;
-  margin-bottom: 5px;
+.intro-text p {
+  font-size: 22px; /* Increased paragraph font size */
+  line-height: 1.6;
+}
+
+.scroll-indicator {
+  font-size: 48px; /* Increased font size */
+  margin-top: 40px; /* Increased margin */
+  text-align: center;
+}
+
+/* Feedback Section Styles */
+.feedback-section {
+  background-color: #F7F7DC;
+  padding: 60px 0; /* Increased padding */
+}
+
+.feedback-container {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1600px; /* Increased max-width */
+  margin: 0 auto;
+  padding: 0 30px; /* Increased horizontal padding */
+}
+
+.feedback {
+  text-align: center;
+  max-width: 400px; /* Increased max-width */
+}
+
+.avatar {
+  width: 120px; /* Increased size */
+  height: 120px; /* Increased size */
+  background-color: #D9D9D9;
+  border-radius: 50%;
+  margin: 0 auto 30px; /* Increased margin */
+}
+
+.feedback p {
+  font-size: 20px; /* Increased font size */
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.user-name {
+  font-weight: bold;
+  font-size: 22px; /* Increased font size */
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #FFFFE0;
+  padding: 40px 0; /* Increased padding */
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1600px; /* Increased max-width */
+  margin: 0 auto;
+  padding: 0 30px; /* Increased horizontal padding */
+}
+
+.footer-logo {
+  width: 75px; /* Increased size */
+}
+
+.footer-left, .footer-center, .footer-right {
+  flex: 1;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 15px; /* Increased margin */
+}
+
+.footer a, .footer p {
+  color: #333;
+  text-decoration: none;
+  font-size: 20px; /* Increased font size */
+}
+
+/* Profile Page CSS - Kuldeep Mohanta */
+
+/* Profile Page Styles */
+.profile-section {
+  background-color: #FFFFF0; /* Light yellow background */
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 40px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+/* Styles for the container of both name fields (First Name and Last Name) */
+.name-fields {
+  flex: 1; /* Takes up available space in the flex container */
+  margin-right: 20px; /* Adds space to the right of the name fields container */
+}
+
+/* Styles for each individual name field (applies to both First Name and Last Name) */
+.name-field {
+  display: flex; /* Uses flexbox for label and input alignment */
+  align-items: center; /* Vertically centers the label and input */
+  margin-bottom: 15px; /* Adds space between First Name and Last Name fields */
+}
+
+/* Styles for the labels "First Name:" and "Last Name:" */
+.name-field label {
+  width: 100px; /* Fixed width for consistent label sizing */
+  font-weight: bold; /* Makes the label text bold */
+  margin-right: 10px; /* Adds space between the label and the input field */
+}
+
+/* Styles for the wrapper around the input field (creates the background and shape) */
+.input-wrapper {
+  flex: 1; /* Takes up remaining space in the name-field container */
+  position: relative; /* Establishes a positioning context for absolute children if needed */
+  overflow: hidden; /* Hides any content that exceeds the wrapper's dimensions */
+  background-color: #E6E6CA; /* Light green background color */
+  border-radius: 4px; /* Rounds the corners of the input wrapper */
+}
+
+/* Styles for the actual input fields where users enter their name */
+.name-field input {
+  width: 100%; /* Makes the input fill the entire input-wrapper */
+  padding: 8px; /* Adds internal spacing within the input field */
+  border: none; /* Removes the default input border */
+  background: transparent; /* Makes the input background transparent */
+  font-size: 16px; /* Sets the font size for the input text */
+  overflow-x: auto; /* Allows horizontal scrolling if the content is too wide */
+  white-space: nowrap; /* Prevents the text from wrapping to a new line */
+}
+
+/* Removes the default focus outline when the input is selected */
+.name-field input:focus {
+  outline: none; /* Removes the default focus outline */
+}
+
+.user-picture {
+  text-align: center;
+}
+
+.picture {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.file-input {
+  display: none;
+}
+
+.file-input-label {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.file-input-label:hover {
+  background-color: #45a049;
+}
+
+.manage-account {
+  margin-bottom: 30px;
+}
+
+.manage-account-links {
+  list-style: none;
+  padding: 0;
+}
+
+.manage-account-links li {
+  margin-bottom: 10px;
+}
+
+.manage-account-links a {
+  color: #4CAF50;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.manage-account-links a:hover {
+  color: #45a049;
+}
+
+.dietary-preferences {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.preferences-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.preferences-container label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.preferences-container input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
 }
 
 .hidden {
   display: none;
-}
-
-.editable {
-  background-color: #FFFFFF;
-  border: 1px solid #CCCCCC;
-}
-
-.transition {
-  transition: all 0.3s ease-in-out;
-}
-
-.file-input {
   opacity: 0;
-  position: absolute;
-  z-index: -1;
+  transition: opacity 0.3s ease;
 }
 
-.file-input-label {
+/* Transition for showing hidden elements */
+.show {
   display: inline-block;
-  padding: 10px 20px;
-  background-color: #6b705c;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
+  opacity: 1;
 }
 
-.file-input-label:hover {
-  background-color: #4a5844;
+/* Editable state for input fields */
+.editable {
+  background-color: #f0f0f0;
+  border: 1px solid #4CAF50;
 }
+
+
+/* About CSS - Princess */
+
+/* Detailed Meal Page CSS - Princess  */
+
+
+/* Sign Page CSS */
+
+
+/* Register CSS */
+
+/* Community CSS */
+
+
+
+/* Contact CSS */
+
+/* Meal Planner CSS */
