@@ -49,7 +49,7 @@
         <a href="../index.html" class="brand">ShareABite</a> <!-- Company Name -->
         <a href="#" class="nav-item">Recipes</a> <!-- Recipes Link -->
         <a href="#" class="nav-item">Community</a> <!-- Community Link -->
-        <a href="#" class="nav-item sign-in">Sign In / Register</a> <!-- Sign In/Register Button -->
+        <a href="login_register.php" class="nav-item sign-in">Sign In / Register</a> <!-- Sign In/Register Button -->
       </nav>
     </div>
   </header>
