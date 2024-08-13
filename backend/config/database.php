@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Database Class
  * 
@@ -14,26 +15,26 @@ require 'vendor/autoload.php'; // Include Composer's autoloader
 
 class Database {
     private $host = "mongodb://localhost:27017";
-    private $db_name = "your_database_name";
+    private $db_name = "Share_bite_db"; // we will change this later
     public $conn;
 
     // Method to establish and return the database connection
-    // public function getConnection() {
-    //     $this->conn = null;
+    public function getConnection() {
+        $this->conn = null;
 
-    //     try {
-    //         // Create a new MongoDB client
-    //         $client = new MongoDB\Client($this->host);
+        try {
+            // Create a new MongoDB client
+            $client = new MongoDB\Client($this->host);
 
-    //         // Select the database
-    //         $this->conn = $client->selectDatabase($this->db_name);
-    //     } catch (Exception $e) {
-    //         // Output connection error message
-    //         echo "Connection error: " . $e->getMessage();
-    //     }
+            // Select the database
+            $this->conn = $client->selectDatabase($this->db_name);
+        } catch (Exception $e) {
+            // Output connection error message
+            echo "Connection error: " . $e->getMessage();
+        }
 
-    //     // Return the connection object
-    //     return $this->conn;
-    // }
+        // Return the connection object
+        return $this->conn;
+    }
 }
 ?>
