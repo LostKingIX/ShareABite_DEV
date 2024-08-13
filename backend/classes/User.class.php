@@ -21,7 +21,7 @@ class User {
         $this->conn = $db;
     }
 
-        /**
+    /**
      * Retrieves a user's information from the database based on their user ID.
      *
      * @param int $user_id The ID of the user to retrieve.
@@ -34,7 +34,7 @@ class User {
         $collection = $this->conn->selectCollection($this->collection_name);
 
         // Fetch the user document by user ID
-        $user = $collection->findOne(['user_id' => $user_id]);
+        $user = $collection->findOne(['user_id' => (int)$user_id]); // CHANGE MADE: Cast user_id to int 
 
         // If user is found, sanitize and assign values
         if ($user) {
@@ -46,7 +46,8 @@ class User {
             $this->last_name = '';
         }
     }
-     /**
+
+    /**
      * Updates a user's information in the database.
      *
      * @param object $data An object containing the user's updated information.
@@ -57,37 +58,34 @@ class User {
      *                    - dietaryPreferences: string - The user's new dietary preferences.
      * @return bool Returns true if the update was successful, false otherwise.
      */
-    
     public function updateUser($data) 
     {
         $collection = $this->conn->selectCollection($this->collection_name);
         $updateResult = $collection->updateOne(
-            ['user_id' => $data->user_id],
+            ['user_id' => (int)$data->user_id], // CHANGE MADE Cast user_id to int 
             ['$set' => [
                 'first_name' => htmlspecialchars($data->firstName),
                 'last_name' => htmlspecialchars($data->lastName),
-                'dietary_preferences' => $data->dietaryPreferences
+                'dietary_preferences' => htmlspecialchars($data->dietaryPreferences)
             ]]
         );
         return $updateResult->getModifiedCount() > 0;
     }
 
-        /**
+    /**
      * Updates the profile picture of a user in the database.
      *
      * @param int $user_id The ID of the user whose profile picture is being updated.
      * @param string $picture_url The URL of the new profile picture.
      * @return bool Returns true if the update was successful, false otherwise.
      */
-
     public function updateProfilePicture($user_id, $picture_url) {
         $collection = $this->conn->selectCollection($this->collection_name);
         $updateResult = $collection->updateOne(
-            ['user_id' => $user_id],
+            ['user_id' => (int)$user_id], // CHANGE MADE: Cast user_id to int 
             ['$set' => ['profile_picture' => htmlspecialchars($picture_url)]]
         );
         return $updateResult->getModifiedCount() > 0;
     }
-    
 }
 ?>

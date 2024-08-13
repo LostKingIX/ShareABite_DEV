@@ -27,6 +27,10 @@
 
 ?> -->
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c74064288f247bb2cfbde544654ffe353227fdcf
  <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,6 +57,12 @@
       </nav>
     </div>
   </header>
+<<<<<<< HEAD
+=======
+=======
+ <?php include('header.php'); ?>
+>>>>>>> c18bf33e8f134c2b689ebe51e912e468829756a1
+>>>>>>> c74064288f247bb2cfbde544654ffe353227fdcf
 
   <!-- Profile Page Content -->
   <main class="main-content" role="main">
