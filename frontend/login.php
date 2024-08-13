@@ -15,7 +15,7 @@
 session_start();
 
 // Include database connection
-include('db.php'); // i 
+include('db.php');
 
 // Initialize variables
 $login_error = '';
@@ -28,38 +28,62 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $email = $_POST['login_email'];
         $password = $_POST['login_password'];
 
-        $stmt = $pdo->prepare("SELECT * FROM users WHERE email = :email");
-        $stmt->execute(['email' => $email]);
-        $user = $stmt->fetch();
+        // Verify reCAPTCHA
+        $recaptchaSecret = 'YOUR_SECRET_KEY'; // Replace with your reCAPTCHA secret key
+        $recaptchaResponse = $_POST['g-recaptcha-response'];
+        $verifyResponse = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret={$recaptchaSecret}&response={$recaptchaResponse}");
+        $responseData = json_decode($verifyResponse);
 
-        if ($user && password_verify($password, $user['password'])) {
-            $_SESSION['user_id'] = $user['id'];
-            $_SESSION['email'] = $user['email'];
-            header("Location: dashboard.php");
-            exit();
+        if ($responseData->success) {
+            // Prepare SQL statement
+            $stmt = $pdo->prepare("SELECT * FROM users WHERE email = :email");
+            $stmt->execute(['email' => $email]);
+            $user = $stmt->fetch();
+
+            if ($user) {
+                if (password_verify($password, $user['password'])) {
+                    // Successful login
+                    $_SESSION['user_id'] = $user['id'];
+                    $_SESSION['email'] = $user['email'];
+                    header("Location: profile.php");  // Redirect to profile page after successful login
+                    exit();
+                } else {
+                    $login_error = "Incorrect password!";
+                }
+            } else {
+                $login_error = "Email not found in our database!";
+            }
         } else {
-            $login_error = "Incorrect email or password!";
+            $login_error = "reCAPTCHA verification failed. Please try again.";
         }
     } elseif (isset($_POST['register'])) {
         // Handle registration
         $firstName = $_POST['first_name'];
         $lastName = $_POST['last_name'];
         $email = $_POST['register_email'];
-        $password = password_hash($_POST['register_password'], PASSWORD_DEFAULT);
+        $password = $_POST['register_password'];
+        $confirmPassword = $_POST['confirm_password'];
 
-        $stmt = $pdo->prepare("SELECT * FROM users WHERE email = :email");
-        $stmt->execute(['email' => $email]);
-        if ($stmt->rowCount() > 0) {
-            $register_error = "Email already exists!";
+        if ($password !== $confirmPassword) {
+            $register_error = "Passwords do not match!";
         } else {
-            $stmt = $pdo->prepare("INSERT INTO users (first_name, last_name, email, password) VALUES (:first_name, :last_name, :email, :password)");
-            $stmt->execute([
-                'first_name' => $firstName,
-                'last_name' => $lastName,
-                'email' => $email,
-                'password' => $password
-            ]);
-            $register_success = "Registration successful! You can now log in.";
+            $stmt = $pdo->prepare("SELECT * FROM users WHERE email = :email");
+            $stmt->execute(['email' => $email]);
+            if ($stmt->rowCount() > 0) {
+                $register_error = "Email already exists!";
+            } else {
+                // Hash the password
+                $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+                // Prepare SQL statement for insertion
+                $stmt = $pdo->prepare("INSERT INTO users (first_name, last_name, email, password) VALUES (:first_name, :last_name, :email, :password)");
+                $stmt->execute([
+                    'first_name' => $firstName,
+                    'last_name' => $lastName,
+                    'email' => $email,
+                    'password' => $hashedPassword
+                ]);
+                $register_success = "Registration successful! You can now log in.";
+            }
         }
     }
 }
