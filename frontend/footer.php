@@ -4,8 +4,8 @@
 
       <!-- Left Side of Footer: ShareABite Company Info -->
       <div class="footer-left">
-        <img src="logo.png" alt="Company Logo" class="footer-logo">
-        <p>ShareABite (c)</p>
+        <img src="../assets/images/logo_test.jpg" alt="Company Logo" class="footer-logo">
+        <p>ShareABite &copy;</p>
         <p>About Us</p>
       </div>
 
