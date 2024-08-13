@@ -1,5 +1,6 @@
 <?php
-
+use MongoDB\Client;
+ 
 /**
  * Database Class
  * 
