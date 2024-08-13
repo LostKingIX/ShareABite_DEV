@@ -9,35 +9,9 @@
  * - Call-to-action for user registration or login
  */ -->
 
- <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ShareABite Home Page</title>
-  <link rel="stylesheet" href="./frontend/css/styles.css">
-</head>
-<body>
-
-<!-- Modified: Restructured header to match wireframe -->
-<header class="header">
-  <div class="header-container">
-      <img src="./assets/images/logo_test.jpg" alt="Company Logo" class="logo">
-      <nav class="nav">
-          <a href="./index.html" class="nav-item">Home</a>
-          <a href="./frontend/profile.html" class="nav-item">Profile</a>
-          
-          <!-- Added: Brand name in the center of navigation -->
-          <span class="brand">ShareABite</span>
-          <a href="#" class="nav-item">Recipes</a>
-          <a href="#" class="nav-item">Community</a>
-          
-          <!-- Modified: Added sign-in button -->
-          <a href="#" class="nav-item sign-in">Sign In / Register</a>
-      </nav>
-  </div>
-</header>
-
+ <!-- Header Section -->
+<?php include('./frontend/header.php'); ?>
+ 
   <!-- Main Content Section -->
   <main class="main-content">
     <!-- Intro Section with Hook -->
@@ -82,35 +56,5 @@
     </section>
   </main>
 
-  <!-- Footer Section -->
-  <footer class="footer">
-    <div class="footer-container">
-      <!-- Left Side of Footer: Company Info -->
-      <div class="footer-left">
-        <img src="./assets/images/logo_test.jpg" alt="Company Logo" class="footer-logo">
-        <span class="brand">ShareABite</span>
-        <p>About Us</p>
-      </div>
-      <!-- Center of Footer: Navigation Links -->
-      <div class="footer-center">
-        <ul class="footer-nav">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Recipes</a></li>
-          <li><a href="#">Community</a></li>
-        </ul>
-      </div>
-      <!-- Right Side of Footer: Legal Info -->
-      <div class="footer-right">
-        <ul class="legal-links">
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms of Use</a></li>
-        </ul>
-        <p>OOP 3 - Summer 2024</p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="./frontend/js/script.js"></script>
-  
-</body>
-</html>
+<!-- Footer Section -->
+<?php include('./frontend/footer.php'); ?>
