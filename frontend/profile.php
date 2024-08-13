@@ -27,7 +27,6 @@
 
 ?> -->
 
-<<<<<<< HEAD
  <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,9 +53,6 @@
       </nav>
     </div>
   </header>
-=======
- <?php include('header.php'); ?>
->>>>>>> c18bf33e8f134c2b689ebe51e912e468829756a1
 
   <!-- Profile Page Content -->
   <main class="main-content" role="main">
