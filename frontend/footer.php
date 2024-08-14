@@ -12,8 +12,8 @@
       <!-- Center of Footer: Navigation Links -->
       <div class="footer-center">
         <ul class="footer-nav">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Recipes</a></li>
+          <li><a href="../index.php">Home</a></li>
+          <li><a href="../frontend/recipe_list.php">Recipes</a></li>
           <li><a href="#">Community</a></li>
         </ul>
       </div>
@@ -21,8 +21,7 @@
       <!-- Right Side of Footer: Legal Info -->
       <div class="footer-right">
         <ul class="legal-links">
-          <li><a href="contact_us.php">Contact Us</a></li>
-          <li><a href="#">Terms of Use</a></li>
+          <li><a href="../frontend/contact_us.php">Contact Us</a></li>
         </ul>
         <p>OOP 3 - Summer 2024</p>
       </div>
