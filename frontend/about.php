@@ -1,4 +1,4 @@
-// about.php
+<!-- // about.php
 /**
  * ShareABite - About Page
  * 
@@ -7,7 +7,7 @@
  * - Description of ShareABite's purpose and features
  * - Information about the team or company behind ShareABite
  * - Any relevant policies or user guidelines
- */
+ */ -->
 
  <!-- Header Section -->
 
