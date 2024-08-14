@@ -4,23 +4,18 @@ use MongoDB\Client;
 /**
  * Database Class
  * 
- * This class is responsible for establishing connections to both MongoDB and MySQL databases.
- * It uses the MongoDB PHP library to connect to MongoDB and PDO for MySQL. The class contains 
- * necessary configuration details for both databases and provides methods to return the connection objects.
+ * This class is responsible for establishing a connection to the MongoDB database.
+ * It uses the MongoDB PHP library to connect to the MongoDB server. The class contains 
+ * the necessary configuration details such as the host and database name, and provides 
+ * a method to return the connection object.
  */
 
 
 class Database {
-    private $mongoHost = "mongodb://localhost:27017";
+    private $mongoHost = "mongodb://localhost:27017"; // MongoDB host
     private $mongoDbName = "Share_bite_db"; // MongoDB database name
 
-    private $mysqlHost = 'localhost';
-    private $mysqlDbName = 'shareabite';
-    private $mysqlUsername = 'root';
-    private $mysqlPassword = '';
-
     public $mongoConn;
-    public $mysqlConn;
 
     // Method to establish and return the MongoDB connection
     public function getMongoConnection() {
@@ -28,7 +23,7 @@ class Database {
 
         try {
             // Create a new MongoDB client
-            $client = new MongoDB\Client($this->mongoHost);
+            $client = new Client($this->mongoHost);
 
             // Select the MongoDB database
             $this->mongoConn = $client->selectDatabase($this->mongoDbName);
@@ -39,25 +34,6 @@ class Database {
 
         // Return the MongoDB connection object
         return $this->mongoConn;
-    }
-
-    // Method to establish and return the MySQL connection
-    public function getMysqlConnection() {
-        $this->mysqlConn = null;
-
-        try {
-            // Create a new PDO instance for MySQL
-            $this->mysqlConn = new PDO("mysql:host={$this->mysqlHost};dbname={$this->mysqlDbName}", $this->mysqlUsername, $this->mysqlPassword);
-            
-            // Set the PDO error mode to exception
-            $this->mysqlConn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        } catch (PDOException $e) {
-            // Handle connection error for MySQL
-            die("MySQL Connection error: " . $e->getMessage());
-        }
-
-        // Return the MySQL connection object
-        return $this->mysqlConn;
     }
 }
 ?>
