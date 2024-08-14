@@ -38,7 +38,15 @@
                     <!-- Add more filter options as needed -->
                 </select>
 
-                <button type="submit" class="btn btn-primary mb-2">Search</button>
+                <button type="submit" class="btn btn-primary mb-2" style="margin-right: 10px;">Search</button>
+                
+                <!-- Redirect the user to a form to submit their own recipe -->
+                <a href="recipe_submission.php">
+                    <button type="button" class="btn btn-primary mb-2">Add Your Own!</button>
+                </a>
+
+
+
             </form>
         </div>
 

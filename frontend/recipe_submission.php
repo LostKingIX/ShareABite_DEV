@@ -1,4 +1,4 @@
-// recipe_submission.php
+<!-- // recipe_submission.php
 /**
  * ShareABite - Recipe Submission Page
  * 
@@ -9,7 +9,7 @@
  * - Input for nutritional information
  * - Tagging system for dietary categories
  */
-
+ -->
 
 
  <!DOCTYPE html>
@@ -26,6 +26,9 @@
         }
     </style>
 </head>
+
+  <!-- Header Section -->
+  <?php include('header.php'); ?>
 <body>
     <div class="container">
         <header class="bg-light py-3 text-center">
@@ -76,9 +79,5 @@
         </div>
     </div>
     
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-</html>
+    <!-- Footer Section -->
+    <?php include('footer.php'); ?>
