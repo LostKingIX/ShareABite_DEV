@@ -8,6 +8,8 @@
  * database connection object to perform queries.
  */
 
+
+ // this the constructor for the community class 
 class Community {
     private $conn;
     private $collection_name = "communities";
@@ -17,7 +19,7 @@ class Community {
     }
 
     /**
-     * Retrieves a community's information from the database based on its community ID.
+     * Retrieves a community's information from the database based on its communityy ID.
      *
      * @param int $community_id The ID of the community to retrieve.
      * @return array|null The community document if found, null otherwise.
@@ -34,7 +36,7 @@ class Community {
     }
 
     /**
-     * Retrieves all communities' information from the database.
+     * Retrieves all communities'  from the database.
      *
      * @return array The list of all community documents.
      */
