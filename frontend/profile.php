@@ -10,7 +10,7 @@
  * - Option to change password
  */ -->
 <!-- 
- <?php
+ <!-- 
   // Include database and user classes
   // include_once './backend/config/database.php';
   // include_once './backend/classes/User.class.php';
@@ -25,44 +25,10 @@
   // $user_id = 1; // Example user ID
   // $user->getUser($user_id);
 
-?> -->
+?> --> 
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> c74064288f247bb2cfbde544654ffe353227fdcf
- <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ShareABite - User Profile</title>
-  <link rel="stylesheet" href="./css/styles.css">
-</head>
-
-<body>
-  <!-- Header Section -->
-  <header class="header">
-    <div class="header-container">
-      <!-- Company Logo -->
-      <img src="../assets/images/logo_test.jpg" alt="Company Logo" class="logo">
-      <!-- Navigation Menu -->
-      <nav class="nav">
-        <a href="#" class="nav-item">Home</a> <!-- Home Link -->
-        <a href="./profile.html" class="nav-item">Profile</a> <!-- Profile Link -->
-        <a href="../index.html" class="brand">ShareABite</a> <!-- Company Name -->
-        <a href="#" class="nav-item">Recipes</a> <!-- Recipes Link -->
-        <a href="#" class="nav-item">Community</a> <!-- Community Link -->
-        <a href="login_register.php" class="nav-item sign-in">Sign In / Register</a> <!-- Sign In/Register Button -->
-      </nav>
-    </div>
-  </header>
-<<<<<<< HEAD
-=======
-=======
+ <!-- Header Section -->
  <?php include('header.php'); ?>
->>>>>>> c18bf33e8f134c2b689ebe51e912e468829756a1
->>>>>>> c74064288f247bb2cfbde544654ffe353227fdcf
 
   <!-- Profile Page Content -->
   <main class="main-content" role="main">
@@ -87,7 +53,7 @@
 
             <div class="user-picture">
                 <!-- PHP would dynamically set the src attribute to user's picture -->
-                <img src="../assets/images/default-profile.jpg" alt="User Picture" class="picture">
+                <img src="../assets/images/default_user_pfp.jpg" alt="User Picture" class="picture">
                 <input type="file" id="pictureUpload" class="file-input" accept="image/*">
                 <label for="pictureUpload" class="file-input-label hidden">Upload</label>
             </div>

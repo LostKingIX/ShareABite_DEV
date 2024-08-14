@@ -10,6 +10,10 @@
  * - Redirection to user dashboard upon successful login
  */
 
+  <!-- Header Section -->
+
+<?php include('header.php'); ?>
+
  <?php
 // Start session
 session_start();
@@ -119,7 +123,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         };
     </script>
 </head>
-<body>
+<body >
     <div class="container mt-5">
         <h2 class="text-center">Begin your journey with ShareABite</h2>
 
@@ -192,6 +196,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+<!-- Footer Section -->
+<?php include('footer.php'); ?>
