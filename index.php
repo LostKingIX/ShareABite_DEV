@@ -18,8 +18,11 @@ include './frontend/header.php';
     <!-- Intro Section with Hook -->
     <section class="intro-section">
       <div class="intro-container">
-        <!-- Placeholder for Company Image -->
-        <div class="company-image"></div>
+       <!-- Placeholder for Company Image -->
+        <div class="company-image">
+            <img src="assets/images/share_food_stock.jpg" alt="Company Image" />
+        </div>
+
         <!-- Introductory Text -->
         <div class="intro-text">
           <h1>Hmm... Thinking of what to eat?</h1>

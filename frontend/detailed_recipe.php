@@ -1,4 +1,4 @@
-// detailed_recipe.php
+<!-- // detailed_recipe.php
 /**
  * ShareABite - Detailed Recipe Page
  * 
@@ -9,7 +9,7 @@
  * - User ratings and reviews
  * - Option to add the recipe to a meal plan
  * - Social sharing functionality
- */
+ */ -->
 
 
  <!-- Header Section -->

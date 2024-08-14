@@ -11,10 +11,17 @@ RUN a2enmod rewrite
 WORKDIR /var/www/html
 
 # Clone the repository
-RUN git clone https://github.com/yourusername/your-repo.git .
+RUN git clone https://github.com/LostKingIX/ShareABite_DEV.git .
 
 # Copy the repository content to the Apache document root
 COPY . /var/www/html/
 
-# Expose port 80
-EXPOSE 80
+# Update the Apache configuration to listen on port 8081
+RUN sed -i 's/Listen 80/Listen 8081/' /etc/apache2/ports.conf \
+    && sed -i 's/:80/:8081/' /etc/apache2/sites-available/000-default.conf
+
+# Expose port 8081
+EXPOSE 8081
+
+# Start Apache in the foreground
+CMD ["apache2-foreground"]

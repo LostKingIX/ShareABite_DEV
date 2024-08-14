@@ -19,7 +19,7 @@
 session_start();
 
 // Include database connection
-include('backend/config/database.php');
+include('../backend/config/database.php');
 
 // Initialize variables
 $login_error = '';

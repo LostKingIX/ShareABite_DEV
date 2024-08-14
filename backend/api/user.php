@@ -19,7 +19,7 @@ switch ($method) {
             // Fetch user data by ID
             $userData = $user->getUser((int)$_GET['id']);
             if ($userData) {
-                // If user is found, return their data as JSON
+                // If user is found, returns their data as JSON
                 $response = [
                     'first_name' => $userData['first_name'],
                     'last_name' => $userData['last_name'],
