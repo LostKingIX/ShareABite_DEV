@@ -10,7 +10,6 @@ use MongoDB\Client;
  * a method to return the connection object.
  */
 
-require 'vendor/autoload.php'; // Include Composer's autoloader
 
 class Database {
     private $mongoHost = "mongodb://localhost:27017"; // MongoDB host

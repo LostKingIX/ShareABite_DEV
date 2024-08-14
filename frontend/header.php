@@ -20,8 +20,8 @@
          <a href="../frontend/profile.php " class="nav-item">Profile</a> <!-- Profile Link -->
          <span class="brand">ShareABite</span> <!-- Company Name -->
          <a href="../frontend/recipe_list.php" class="nav-item">Recipes</a> <!-- Recipes Link -->
-         <a href="#" class="nav-item">Community</a> <!-- Community Link -->
-         <a href="./login.php" class="nav-item sign-in">Sign In / Register</a> <!-- Sign In/Register Button -->
+         <a href="../frontend/community.php" class="nav-item">Community</a> <!-- Community Link -->
+         <a href="../frontend/login.php" class="nav-item sign-in">Sign In / Register</a> <!-- Sign In/Register Button -->
        </nav>
      </div>
    </header>
