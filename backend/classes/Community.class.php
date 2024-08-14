@@ -3,55 +3,49 @@
  * Community Class
  * 
  * This class is responsible for managing community-related data and operations within the application.
- * It provides methods to fetch community details from the MongoDB database, ensuring that data is 
- * properly sanitized before being used in the application. The class constructor requires a 
- * database connection object to perform queries.
+ * It provides methods to fetch, create, update, and delete community posts from the MongoDB database.
  */
 
 class Community {
     private $conn;
-    private $collection_name = "communities";
+    private $collection_name = "community_posts";
 
     public function __construct($db) {
         $this->conn = $db;
     }
 
     /**
-     * Retrieves a community's information from the database based on its community ID.
+     * Retrieves a community post's information from the database based on its post ID.
      *
-     * @param int $community_id The ID of the community to retrieve.
-     * @return array|null The community document if found, null otherwise.
+     * @param int $post_id The ID of the post to retrieve.
+     * @return array|null The community post document if found, null otherwise.
      */
-    public function getCommunity($community_id) 
+    public function getPost($post_id) 
     {
-        // Select the 'communities' collection
         $collection = $this->conn->selectCollection($this->collection_name);
-
-        // Fetch the community document by community ID
-        $community = $collection->findOne(['community_id' => (int)$community_id]);
-
-        return $community;
+        $post = $collection->findOne(['post_id' => (int)$post_id]);
+        return $post;
     }
 
     /**
-     * Retrieves all communities' information from the database.
+     * Retrieves all community posts from the database.
      *
-     * @return array The list of all community documents.
+     * @return array The list of all community post documents.
      */
-    public function getAllCommunities() 
+    public function getAllPosts() 
     {
         $collection = $this->conn->selectCollection($this->collection_name);
-        $communities = $collection->find()->toArray();
-        return $communities;
+        $posts = $collection->find()->toArray();
+        return $posts;
     }
 
     /**
-     * Creates a new community entry in the database.
+     * Creates a new community post in the database.
      *
-     * @param array $data The data of the community to be created.
-     * @return array The inserted ID of the new community.
+     * @param array $data The data of the post to be created.
+     * @return array The inserted ID of the new post.
      */
-    public function createCommunity($data) 
+    public function createPost($data) 
     {
         $collection = $this->conn->selectCollection($this->collection_name);
         $insertResult = $collection->insertOne($data);
@@ -59,32 +53,32 @@ class Community {
     }
 
     /**
-     * Updates a community's information in the database.
+     * Updates a community post's information in the database.
      *
-     * @param int $community_id The ID of the community to update.
-     * @param array $data The updated data of the community.
+     * @param int $post_id The ID of the post to update.
+     * @param array $data The updated data of the post.
      * @return bool Returns true if the update was successful, false otherwise.
      */
-    public function updateCommunity($community_id, $data) 
+    public function updatePost($post_id, $data) 
     {
         $collection = $this->conn->selectCollection($this->collection_name);
         $updateResult = $collection->updateOne(
-            ['community_id' => (int)$community_id],
+            ['post_id' => (int)$post_id],
             ['$set' => $data]
         );
         return $updateResult->getModifiedCount() > 0;
     }
 
     /**
-     * Deletes a community entry from the database.
+     * Deletes a community post from the database.
      *
-     * @param int $community_id The ID of the community to delete.
+     * @param int $post_id The ID of the post to delete.
      * @return bool Returns true if the deletion was successful, false otherwise.
      */
-    public function deleteCommunity($community_id) 
+    public function deletePost($post_id) 
     {
         $collection = $this->conn->selectCollection($this->collection_name);
-        $deleteResult = $collection->deleteOne(['community_id' => (int)$community_id]);
+        $deleteResult = $collection->deleteOne(['post_id' => (int)$post_id]);
         return $deleteResult->getDeletedCount() > 0;
     }
 }
