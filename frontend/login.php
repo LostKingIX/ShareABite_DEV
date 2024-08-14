@@ -1,4 +1,4 @@
-// login.php
+<!-- // login.php
 /**
  * ShareABite - User Login Page
  * 
@@ -8,7 +8,7 @@
  * - 'Forgot Password' functionality
  * - Error handling for incorrect credentials
  * - Redirection to user dashboard upon successful login
- */
+ */ -->
 
   <!-- Header Section -->
 
@@ -19,7 +19,7 @@
 session_start();
 
 // Include database connection
-include('db.php');
+include('backend/config/database.php');
 
 // Initialize variables
 $login_error = '';

@@ -1,4 +1,4 @@
-// community.php
+<!-- // community.php
 /**
  * ShareABite - Community Page
  * 
@@ -8,4 +8,4 @@
  * - Discussion forums or comment sections
  * - Featured community members or top contributors
  * - Recent activity feed
- */
+ */ -->
