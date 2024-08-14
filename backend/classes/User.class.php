@@ -48,7 +48,7 @@ class User {
     }
 
     /**
-     * Updates the profile picture of a user in the database.
+     * Updates the profile picture of a user.
      *
      * @param int $user_id The ID of the user whose profile picture is being updated.
      * @param string $picture_url The URL of the new profile picture.
