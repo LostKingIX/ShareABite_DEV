@@ -18,10 +18,11 @@
 </head>
 <body>
     <div class="container">
-        <header class="bg-light py-3 text-center">
-            <h1>Recipe List</h1>
-        </header>
+ 
+    <!-- Header Section -->
+ <?php include('header.php'); ?>
 
+<!-- Page Content Starts -->
         <!-- Search and Filter Section -->
         <div class="search-filter my-4">
             <form action="" method="GET" class="form-inline">
@@ -56,11 +57,11 @@
         <!-- Recipe List Section -->
         <div class="row">
             <?php
-            // Example PHP logic to fetch and display recipes (replace with actual data fetching logic)
+            //  PHP logic to fetch and display recipes (replace with actual data fetching logic)
             $recipes = [
-                ['id' => 1, 'title' => 'Spaghetti Bolognese', 'image' => 'spaghetti.jpg', 'description' => 'A classic Italian pasta dish with rich meat sauce.'],
-                ['id' => 2, 'title' => 'Chicken Curry', 'image' => 'chicken_curry.jpg', 'description' => 'A spicy and flavorful chicken dish with Indian spices.'],
-                ['id' => 3, 'title' => 'Vegetable Stir Fry', 'image' => 'stir_fry.jpg', 'description' => 'A healthy and colorful mix of vegetables stir-fried in a savory sauce.']
+                ['id' => 1, 'title' => 'Spaghetti Bolognese', 'image' => 'assets/images/Spaghetti_Bolognese_Stock.jpg', 'description' => 'A classic Italian pasta dish with rich meat sauce.'],
+                ['id' => 2, 'title' => 'Chicken Curry', 'image' => 'assets/images/chicken_curry_stock.jpg', 'description' => 'A spicy and flavorful chicken dish with Indian spices.'],
+                ['id' => 3, 'title' => 'Vegetable Stir Fry', 'image' => 'assets/images/vegetable_stir_fry_stock.jpg', 'description' => 'A healthy and colorful mix of vegetables stir-fried in a savory sauce.']
                 // Add more recipes as needed
             ];
 
